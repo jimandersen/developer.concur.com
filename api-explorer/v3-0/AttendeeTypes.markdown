@@ -193,9 +193,8 @@ https://www.concursolutions.com/api/v3.0/expense/attendeetypes?limit=15
 }
 ```
 
-
 ####Post Expense for Attendee Types
-This endpoint allows users to create a new attendee type
+This endpoint allows users to create a new attendee type. 
 
 #####Parameters
 Parameter | Value | Description | Parameter Type | Data Type
@@ -211,9 +210,22 @@ https://www.concursolutions.com/api/v3.0/expense/attendeetypes
 Placeholder
 ```
 
-
 ####Delete Expense attendee types by ID
-This endpoint allows the user to DELETE a specified attendee type.
+This endpoint allows the user to DELETE a specified attendee type. It is important that you use the ID generated in the GET Allocations by entry process above for the specific attendee. Use the "ID" associated with the specific name and Connector ID for the specific single allocation as in this example:
+
+```
+ "Name": "Cegedim HCP Search-OneKey US",
+      "Code": "HCPCGDM",
+      "AttendeeFormID": "gWvidmKNPVDSKcgxbk8YONZtExDByBhz0Ww",
+      "DuplicateSearchFields": [
+        "ExternalId"
+      ],
+      "ConnectorID": "gWh$sv385JxfDWJGeyFYDIs$s$sXOIk",
+      "AllowManuallyEnteredAttendees": false,
+      "AllowAttendeeCountEditing": false,
+      "ID": "gWjYOjoSwDzKJB3GveyY2ET9CMd18",
+      "URI": "https://www.concursolutions.com/api/v3.0/expense/attendeetypes/gWjYOjoSwDzKJB3GveyY2ET9CMd18"
+```
 
 #####Parameters
 Parameter | Value | Description | Parameter Type | Data Type |
@@ -222,11 +234,11 @@ id | Required | The ID of the attendee type to delete. | path | string
 
 #####Request URL
 ```
-https://www.concursolutions.com/api/v3.0/expense/attendeetypes/<attendee type ID>
+https://www.concursolutions.com/api/v3.0/expense/attendeetypes/gWjYOjoSwDzKJB3GveyY2ET9CMd18
 ```
-#####XML Example of a successful response
+#####JSON Example of a successful response
 ```
-Placeholder
+no content
 ```
 
 
@@ -240,11 +252,23 @@ id | required | The id of the attendee type. | path | string |
 
 #####Request URL
 ```
-https://www.concursolutions.com/api/v3.0/expense/attendeetypes/<attendee type id>
+https://www.concursolutions.com/api/v3.0/expense/attendeetypes/gWjYOjoW1gl1OXFG6j3OQhbaWAc1i
 ```
-#####XML Example of a successful response
+#####JSON Example of a successful response
 ```
-Placeholder
+{
+  "Name": "Cegedim HCO Search–OneKey US",
+  "Code": "HCOCGDM",
+  "AttendeeFormID": "gWvidmKNPVDSFud0Rqt4l9Y9AUDxOyVKkWg",
+  "DuplicateSearchFields": [
+    "ExternalId"
+  ],
+  "ConnectorID": "",
+  "AllowManuallyEnteredAttendees": false,
+  "AllowAttendeeCountEditing": false,
+  "ID": "gWjYOjoW1gl1OXFG6j3OQhbaWAc1i",
+  "URI": "https://www.concursolutions.com/api/v3.0/expense/attendeetypes/gWjYOjoW1gl1OXFG6j3OQhbaWAc1i"
+}
 ```
 
 
